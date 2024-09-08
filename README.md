@@ -1,1 +1,1 @@
-# Rock-Paper-Sissor
+This is the odin project rock paper sissor excersice built using javascript 

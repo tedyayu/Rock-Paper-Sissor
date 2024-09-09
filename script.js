@@ -11,5 +11,9 @@ function getComputerChoice(){
         computerMove='sissor';
     }
 
-    console.log(computerMove);
+}
+
+function getHumanChoice(){
+    
+    
 }

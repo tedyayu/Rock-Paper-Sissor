@@ -1,10 +1,14 @@
 let computerMove='';
-let humanMove;
+let humanMove='';
 let humanScore=0;
 let computerScore=0;
-let yourResult;
-let computerResult;
-
+let result='';
+const span1=document.querySelector('.span-1');
+const yourResult=document.createElement('span');
+const span2=document.querySelector('.span-2');
+const computerResult=document.createElement('span');
+const insider=document.querySelector('.insider');
+const theResult=document.createElement('h3');
 
 function getComputerChoice(){
     
@@ -62,18 +66,34 @@ function scoreCalculator(){
     }
   
     if (humanScore>computerScore){
-        console.log(`human score is ${humanScore} the computer score is ${computerScore} so you win!`)
+        result='you win'
     
     }
     else if(humanScore<computerScore){
-        console.log(`computer score is ${computerScore}  and human score is ${humanScore} so computer beates!`)
+        result='computer wins';
     }
     else{
-        console.log('you are the same!');
+        result='both of u are the same';
     }
+    
+    yourResult.textContent=humanScore;
+    span1.appendChild(yourResult);
+
+   
+    computerResult.textContent=computerScore;
+    span2.appendChild(computerResult);
+
+    theResult.textContent=result;
+    insider.appendChild(theResult);
+
     
     
     
 }
+function theReset(computerScore,humanScore){
+    computerScore=0;
+    humanScore=0;
+}
+
 
 
